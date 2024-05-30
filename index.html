@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <title>Grid System</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav">Navbar</div>
+        <div>
+          <div class="topnav">
+            <div id="myLinks">
+              <a id="neutral" onclick="setTheme('neutral')">Neutral</a>
+              <a id="modern" onclick="setTheme('modern')">Modern</a>
+              <a id="dark" onclick="setTheme('dark')">Dark</a>
+              <a id="crispy" onclick="setTheme('crispy')">Crispy</a>
+              <a id="cool" onclick="setTheme('cool')">Cool</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <main>Main</main>
+      <div id="sidebar">
+        Sidebar
+        <div class="btn-group">
+          <button class="button" onclick="setTheme('neutral')">Neutral Theme</button>
+          <button class="button" onclick="setTheme('modern')">Modern Theme</button>
+          <button class="button" onclick="setTheme('dark')">Dark Theme</button>
+          <button class="button" onclick="setTheme('crispy')">Crispy Theme</button>
+          <button class="button" onclick="setTheme('cool')">Cool Theme</button>
+        </div>
+      </div>
+      <div id="content1">Content1</div>
+      <div id="content2">Content2</div>
+      <div id="content3">Content3</div>
+      <footer>Footer</footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

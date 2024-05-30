@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* Set base background color */
+  background-color: var(--backgroundColor);
+  /* Set base text color */
+  color: var(--textColor);
+}
+
+:root {
+  --main-radius: 5px;
+  --main-padding: 10px;
+  --main-margin: 5px 2px 2px;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  gap: 0.5rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 30px;
+  color: rgba(255, 253, 253, 0.795);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+nav {
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+
+main {
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+#sidebar {
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+#content1 {
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+#content2 {
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+#content3 {
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+footer {
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin: var(--main-margin);
+}
+
+.btn-group .button {
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 250px;
+  display: block;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-group .button {
+  border-bottom: none; /* Prevent double borders */
+  margin-bottom: 10px; /* Add a bottom margin of 10px */
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+/* Define styles for each theme using the variables */
+
+body.neutral nav {
+  background: var(--navBackground);
+}
+
+body.neutral main {
+  background: var(--mainBackground);
+  color: var(--textColor);
+}
+
+body.neutral #sidebar {
+  background: var(--sidebarBackground);
+}
+
+body.neutral #content1 {
+  background: var(--content1Background);
+}
+
+body.neutral #content2 {
+  background: var(--content2Background);
+}
+
+body.neutral #content3 {
+  background: var(--content3Background);
+}
+
+body.neutral footer {
+  background: var(--footerBackground);
+}
+
+body.neutral .btn-group .button {
+  background-color: var(--buttonBackground);
+  border: 1px solid var(--buttonBorderColor);
+  color: var(--buttonTextColor);
+}
+
+body.neutral .btn-group .button:hover {
+  background-color: var(--buttonHoverBackground);
+}
+
+/* Repeat the pattern for other themes */
+
+body.modern nav {
+  background: var(--navBackground);
+}
+
+body.modern main {
+  background: var(--mainBackground);
+  color: var(--textColor);
+}
+
+body.modern #sidebar {
+  background: var(--sidebarBackground);
+}
+
+body.modern #content1,
+body.modern #content2,
+body.modern #content3 {
+  background: var(--content1Background);
+}
+
+body.modern footer {
+  background: var(--footerBackground);
+}
+
+body.modern .btn-group .button {
+  background-color: var(--buttonBackground);
+  border: 1px solid var(--buttonBorderColor);
+  color: var(--buttonTextColor);
+}
+
+body.modern .btn-group .button:hover {
+  background-color: var(--buttonHoverBackground);
+}
+
+/* Define styles for the dark theme using the variables */
+
+body.dark nav {
+  background: var(--navBackground);
+}
+
+body.dark main {
+  background: var(--mainBackground);
+  color: var(--textColor);
+}
+
+body.dark #sidebar {
+  background: var(--sidebarBackground);
+}
+
+body.dark #content1,
+body.dark #content2,
+body.dark #content3 {
+  background: var(--content1Background);
+}
+
+body.dark footer {
+  background: var(--footerBackground);
+}
+
+body.dark .btn-group .button {
+  background-color: var(--buttonBackground);
+  border: 1px solid var(--buttonBorderColor);
+  color: var(--buttonTextColor);
+}
+
+body.dark .btn-group .button:hover {
+  background-color: var(--buttonHoverBackground);
+}
+
+body.crispy nav {
+  background: var(--navBackground);
+}
+
+body.crispy main {
+  background: var(--mainBackground);
+  /* color: var(--textColor);  Uncomment this line if you want to set a specific text color in the main area */
+}
+
+body.crispy #sidebar {
+  background: var(--sidebarBackground);
+}
+
+body.crispy #content1,
+body.crispy #content2,
+body.crispy #content3 {
+  background: var(--content1Background);
+}
+
+body.crispy footer {
+  background: var(--footerBackground);
+}
+
+body.crispy .btn-group .button {
+  background-color: var(--buttonBackground);
+  border: 1px solid var(--buttonBorderColor);
+  color: var(--buttonTextColor);
+}
+
+body.crispy .btn-group .button:hover {
+  background-color: var(--buttonHoverBackground);
+}
+
+/* Define styles for the cool theme using the variables */
+
+body.cool nav {
+  background: var(--navBackground);
+}
+
+body.cool main {
+  background: var(--mainBackground);
+  color: var(--textColor);
+}
+
+body.cool #sidebar {
+  background: var(--sidebarBackground);
+}
+
+body.cool #content1,
+body.cool #content2,
+body.cool #content3 {
+  background: var(--content1Background);
+}
+
+body.cool footer {
+  background: var(--footerBackground);
+}
+
+body.cool .btn-group .button {
+  background-color: var(--buttonBackground);
+  border: 1px solid var(--buttonBorderColor);
+  color: var(--buttonTextColor);
+}
+
+body.cool .btn-group .button:hover {
+  background-color: var(--buttonHoverBackground);
+}
+
+.topnav {
+  display: none;
+}
+
+@media only screen and (max-width: 550px), (max-width: 1440px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+  .btn-group {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .nav,
+  #sidebar {
+    display: none;
+  }
+
+  .topnav {
+    display: block;
+    overflow: hidden;
+    /* background-color: #333; */
+    position: relative;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .topnav a {
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a.icon {
+    float: right;
+  }
+
+  #neutral:hover {
+    color: var(--content1Background);
+  }
+
+  #modern:hover {
+    color: var(--content1Background);
+  }
+
+  #dark:hover {
+    color: var(--content1Background);
+  }
+
+  #crispy:hover {
+    color: var(--content1Background);
+  }
+
+  #cool:hover {
+    color: var(--content1Background);
+  }
+}
